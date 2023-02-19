@@ -27,12 +27,15 @@ samples, guidance on mobile development, and a full API reference.
 
 
 ---
+## 保管ショートカット
 
 stf:ステイトフルウィジェットの作成
 stl:ステイトレスウィジェットの作成
 
-
 ---
+参考資料
+
+[MaterialAppとScaffold](https://codezine.jp/article/detail/13329)
 
 
 

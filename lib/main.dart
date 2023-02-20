@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutterstudy/heme_page.dart';
 import 'package:flutterstudy/profile_page.dart';
+import 'StudyPage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -31,6 +32,7 @@ class _RootPageState extends State<RootPage> {
   List<Widget> pages = const [
     HomePage(),
     ProfilePage(),
+    StudyPage(),
   ];
   @override
   Widget build(BuildContext context) {
@@ -48,7 +50,8 @@ class _RootPageState extends State<RootPage> {
       bottomNavigationBar: NavigationBar(
         destinations: const [
           NavigationDestination(icon: Icon(Icons.home), label: 'Home'),
-          NavigationDestination(icon: Icon(Icons.person), label: 'Profile')
+          NavigationDestination(icon: Icon(Icons.person), label: 'Profile'),
+          NavigationDestination(icon: Icon(Icons.account_circle_sharp), label: 'study')
         ],
         onDestinationSelected: (int index){
           setState(() {

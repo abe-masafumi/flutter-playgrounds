@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutterstudy/heme_page.dart';
 import 'package:flutterstudy/profile_page.dart';
-import 'StudyPage.dart';
+import 'myform.dart';
 
 void main() {
   runApp(const MyApp());
@@ -29,10 +29,10 @@ class RootPage extends StatefulWidget {
 
 class _RootPageState extends State<RootPage> {
   int currentPage = 0;
-  List<Widget> pages = const [
-    HomePage(),
-    ProfilePage(),
-    StudyPage(),
+  List<Widget> pages = [
+    const HomePage(),
+    const ProfilePage(),
+    MyForm(),
   ];
   @override
   Widget build(BuildContext context) {
@@ -51,11 +51,12 @@ class _RootPageState extends State<RootPage> {
         destinations: const [
           NavigationDestination(icon: Icon(Icons.home), label: 'Home'),
           NavigationDestination(icon: Icon(Icons.person), label: 'Profile'),
-          NavigationDestination(icon: Icon(Icons.account_circle_sharp), label: 'study')
+          NavigationDestination(
+              icon: Icon(Icons.account_circle_sharp), label: 'study')
         ],
-        onDestinationSelected: (int index){
+        onDestinationSelected: (int index) {
           setState(() {
-          currentPage = index;
+            currentPage = index;
           });
         },
         selectedIndex: currentPage,
